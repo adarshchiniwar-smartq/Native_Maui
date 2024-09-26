@@ -38,10 +38,16 @@
 		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'tizen'">6.5</SupportedOSPlatformVersion>
 	</PropertyGroup>
 
+
+	<!--<PropertyGroup>
+		<ForceSimulatorX64ArchitectureInIDE>true</ForceSimulatorX64ArchitectureInIDE>
+	</PropertyGroup>-->
+	
 	<PropertyGroup Condition="'$(TargetFramework)'=='net8.0-ios'">
 	  <CodesignKey>Apple Development: Adarsh Chiniwar (MBUYGH2BMK)</CodesignKey>
 	  <CodesignProvision>VS: WildCard Development</CodesignProvision>
 	</PropertyGroup>
+
 
 	<ItemGroup>
 		<!-- App Icon -->
@@ -61,6 +67,13 @@
 		<MauiAsset Include="Resources\Raw\**" LogicalName="%(RecursiveDir)%(Filename)%(Extension)" />
 	</ItemGroup>
 
+
+	<ItemGroup>
+	  <None Include="PrinterSDK.resources\libepos2.xcframework\.DS_Store" />
+	  <None Include="PrinterSDK.resources\libepos2.xcframework\ios-arm64\.DS_Store" />
+	  <None Include="PrinterSDK.resources\libepos2.xcframework\ios-arm64_x86_64-simulator\.DS_Store" />
+	</ItemGroup>
+
 	<ItemGroup>
 		<PackageReference Include="Microsoft.Maui.Controls" Version="$(MauiVersion)" />
 		<PackageReference Include="Microsoft.Maui.Controls.Compatibility" Version="$(MauiVersion)" />
@@ -68,12 +81,16 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <Reference Include="NewBinding.MaciOS.Binding">
-	    <HintPath>NewBinding.MaciOS.Binding.dll</HintPath>
-	  </Reference>
 	  <Reference Include="PrinterSDK">
 	    <HintPath>PrinterSDK.dll</HintPath>
 	  </Reference>
+	</ItemGroup>
+
+
+	<ItemGroup>
+	  <None Update="PrinterSDK.dll">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </None>
 	</ItemGroup>
 
 </Project>

@@ -1,4 +1,7 @@
 ﻿using PrinterSDK;
+//#if IOS
+//using Pring
+//#endif
 
 namespace Native
 {
@@ -35,8 +38,8 @@ namespace Native
                 Console.WriteLine(ex.Message);
             }
         }
-        PrinterSDK.Epos2DeviceInfo deviceInfo;
-        Epos2FilterOption filterOption;
+        //PrinterSDK.Epos2DeviceInfo deviceInfo;
+        //Epos2FilterOption filterOption;
         private void PrintData()
         {
 
@@ -45,6 +48,7 @@ namespace Native
                 Epos2Printer = new Epos2Printer(5, 0);
                 //deviceInfo = new PrinterSDK.Epos2DeviceInfo();
                 //filterOption = new Epos2FilterOption();
+                //IosNative.Epos2Printer epos2Printer = new IosNative.Epos2Printer();
             }
             catch (Exception ex)
             {
