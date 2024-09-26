@@ -28,5 +28,13 @@
 	</array>
 	<key>XSAppIconAssets</key>
 	<string>Assets.xcassets/appicon.appiconset</string>
+	<key>NSBluetoothPeripheralUsageDescription</key>
+	<string>Required for printer</string>
+	<key>Privacy - Bluetooth Always Usage Description</key>
+	<string>Printer Connection</string>
+	<key>UISupportedExternalAccessoryProtocols</key>
+	<array>
+		<string>com.epson.escpos</string>
+	</array>
 </dict>
 </plist>

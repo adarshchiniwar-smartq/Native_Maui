@@ -68,11 +68,11 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <Reference Include="IosNative">
-	    <HintPath>..\..\..\..\Downloads\ios binding\IosNative.dll</HintPath>
-	  </Reference>
 	  <Reference Include="NewBinding.MaciOS.Binding">
 	    <HintPath>NewBinding.MaciOS.Binding.dll</HintPath>
+	  </Reference>
+	  <Reference Include="PrinterSDK">
+	    <HintPath>PrinterSDK.dll</HintPath>
 	  </Reference>
 	</ItemGroup>
 
