@@ -1,10 +1,22 @@
 ﻿<BindingAssembly>
 	<NativeReference Name="libepos2.xcframework">
 		<ForceLoad>True</ForceLoad>
-		<Frameworks></Frameworks>
+		<Frameworks>ExternalAccessory CoreBluetooth</Frameworks>
 		<IdentityWithoutPathSeparatorSuffix>libepos2.xcframework</IdentityWithoutPathSeparatorSuffix>
 		<IsCxx></IsCxx>
 		<Kind>Static</Kind>
+		<LinkerFlags>-lxml2</LinkerFlags>
+		<LinkWithSwiftSystemLibraries></LinkWithSwiftSystemLibraries>
+		<NeedsGccExceptionHandling></NeedsGccExceptionHandling>
+		<SmartLink>False</SmartLink>
+		<WeakFrameworks></WeakFrameworks>
+	</NativeReference>
+	<NativeReference Name="libxml2.2.dylib">
+		<ForceLoad>True</ForceLoad>
+		<Frameworks></Frameworks>
+		<IdentityWithoutPathSeparatorSuffix>libxml2.2.dylib</IdentityWithoutPathSeparatorSuffix>
+		<IsCxx></IsCxx>
+		<Kind>Dynamic</Kind>
 		<LinkerFlags></LinkerFlags>
 		<LinkWithSwiftSystemLibraries></LinkWithSwiftSystemLibraries>
 		<NeedsGccExceptionHandling></NeedsGccExceptionHandling>
