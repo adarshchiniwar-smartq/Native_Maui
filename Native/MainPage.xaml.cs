@@ -29,9 +29,9 @@ namespace Native
             try
             {
                 // Ensure the code only runs on supported platforms
-//#if __IOS__
-//                Task.Run(() => PrintData()); 
-//#endif
+                //#if __IOS__
+                //                Task.Run(() => PrintData()); 
+                //#endif
                 PrintData();
 
             }
@@ -51,16 +51,18 @@ namespace Native
                 deviceInfo = new Epos2DeviceInfo();
                 filterOption = new Epos2FilterOption();
                 filterOption.DeviceType = 1;
-                int rea = Epos2Discovery.Start(filterOption, new Epos2DiscoveryDelegateImplementation());
+                Console.WriteLine("Test Line");
+                //int rea = Epos2Discovery.Start(filterOption, new Epos2DiscoveryDelegateImplementation());
+                Epos2DiscoveryDelegateImplementation epos2DiscoveryDelegateImplementation = new Epos2DiscoveryDelegateImplementation();
+                int a = Epos2Discovery.Start(filterOption, epos2DiscoveryDelegateImplementation);
 
-                
             }
             catch (Exception ex)
             {
             }
-           
 
-            
+
+
 
         }
     }
@@ -68,10 +70,12 @@ namespace Native
     //Implement the Epos2DiscoveryDelegate interface
     public class Epos2DiscoveryDelegateImplementation : Epos2DiscoveryDelegate
     {
+
         public override void OnDiscovery(Epos2DeviceInfo deviceInfo)
         {
-            // Handle discovery event
+            base.OnDiscovery(deviceInfo);
         }
+
     }
 
 }
