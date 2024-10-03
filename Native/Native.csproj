@@ -71,7 +71,11 @@
 		<Reference Include="PrinterSDK">
 			<HintPath>PrinterSDK.dll</HintPath>
 		</Reference>
+	
 		<Reference Include="Microsoft.iOS, Version=18.0.0.0, Culture=neutral, PublicKeyToken=84e04ff9cfb79065" />
+		<Reference Include="Microsoft.iOS">
+		  <HintPath>..\..\Microsoft.iOS.dll</HintPath>
+		</Reference>
 	</ItemGroup>
 	<ItemGroup>
 		<None Update="PrinterSDK.dll">

@@ -2,6 +2,8 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>NSBluetoothAlwaysUsageDescription</key>
+	<string></string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>UIDeviceFamily</key>
@@ -28,10 +30,6 @@
 	</array>
 	<key>XSAppIconAssets</key>
 	<string>Assets.xcassets/appicon.appiconset</string>
-	<key>NSBluetoothPeripheralUsageDescription</key>
-	<string>Required for printer</string>
-	<key>Privacy - Bluetooth Always Usage Description</key>
-	<string>Printer Connection</string>
 	<key>UISupportedExternalAccessoryProtocols</key>
 	<array>
 		<string>com.epson.escpos</string>

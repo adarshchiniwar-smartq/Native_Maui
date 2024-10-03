@@ -32,6 +32,8 @@
                 HorizontalOptions="Fill" />
 
             <Label x:Name="texr" />
+
+            <Button Text="Print Data" Clicked="Button_Clicked" />
         </VerticalStackLayout>
     </ScrollView>
 
